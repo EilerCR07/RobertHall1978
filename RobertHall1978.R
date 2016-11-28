@@ -64,6 +64,8 @@ PriceDeflator <- cbind(PriceDeflator, Year)
 colnames(PriceDeflator )[8] <- 'NondurablesDeflator'
 colnames(PriceDeflator )[9] <- 'ServicesDeflator'
 PriceDeflator <- subset(PriceDeflator[ ,c(8, 9)])
+	# scale population
+Population$NationalPopulation <- Population$NationalPopulation * 1000
 
 # munge Population
 colnames(Population)[2] <- 'NationalPopulation'
